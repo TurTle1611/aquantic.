@@ -12,8 +12,6 @@ public static class SliderStyles
                 background = Texture.NewBorder(0, 0, 0, .15f, .15f, .15f),
             },
 
-            fixedHeight = 10,
-            border = new RectOffset(1, 1, 1, 1),
         };
     }
 
@@ -23,16 +21,7 @@ public static class SliderStyles
         {
             normal = {
                 background = Texture.NewBorder(0, 0, 0, .3f, .3f, .3f),
-            },
-            active = {
-                background = Texture.NewBorder(0, 0, 0, .4f, .4f, .4f),
-            },
-            hover = {
-                background = Texture.NewBorder(0, 0, 0, .5f, .5f, .5f),
-            },
-            fixedHeight = 10,
-            fixedWidth = 12,
-            border = new RectOffset(1, 1, 1, 1),
+            }
         };
     }
 
@@ -64,9 +53,9 @@ public static class SliderStyles
         {
             normal = {
                 background = Texture.NewBorder(.2f, .2f, .2f, .075f, .075f, .075f),
-            },
+            }
 
-            border = new RectOffset(1, 1, 1, 1),
+        
         };
     }
 }

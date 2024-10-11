@@ -77,7 +77,7 @@ public static class Menu
         // draw
         GUILayout.BeginVertical(GUIContent.none, sectionStyle, GUILayout.Width((WindowRect.width / 2) - 12));
         GUILayout.Space(-8);
-        GUILayout.Label(titleText, titleStyle, GUILayout.Width(titleStyle.CalcSize(titleText).x + 20));
+        GUILayout.Label("!", GUILayout.Width(titleStyle.CalcSize(titleText).x + 20));
 
         _isSectionOpen = true;
     }
@@ -87,7 +87,7 @@ public static class Menu
         var buttonStyle = _styleCache.GetOrCreate(CacheStorage.CreateCacheKey(text, "button"), ButtonStyles.Create);
 
         // draw and call if pressed
-        if (GUILayout.Button(text, buttonStyle))
+        if (GUILayout.Button(text))
             callback();
     }
     public static (bool Value, KeyCode? KeyBind) NewToggle(string text, bool value, KeyCode? keyBind)
@@ -111,12 +111,12 @@ public static class Menu
         GUILayout.BeginVertical(GUILayout.Height(toggleStyle.fixedHeight));
         GUILayout.FlexibleSpace();
         GUILayout.Space(2);
-        GUILayout.Label(displayText, textStyle, GUILayout.Width(textStyle.CalcSize(displayText).x + 2));
+        GUILayout.Label("displayText, textStyle", GUILayout.Width(textStyle.CalcSize(displayText).x + 2));
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();
 
         // keybind logic
-        if (GUILayout.Button(valueContent, buttonStyle, GUILayout.Width(buttonStyle.CalcSize(valueContent).x + 10)) || newKeybind is null)
+        if (GUILayout.Button("valueContent, buttonStyle", GUILayout.Width(buttonStyle.CalcSize(valueContent).x + 10)) || newKeybind is null)
         {
             if (!Input.anyKey)
             {
@@ -154,7 +154,7 @@ public static class Menu
         GUILayout.BeginVertical(GUILayout.Height(toggleStyle.fixedHeight));
         GUILayout.FlexibleSpace();
         GUILayout.Space(2);
-        GUILayout.Label(displayText, textStyle, GUILayout.Width(textStyle.CalcSize(displayText).x + 2));
+        GUILayout.Label("displayText, textStyle", GUILayout.Width(textStyle.CalcSize(displayText).x + 2));
         GUILayout.FlexibleSpace();
         GUILayout.EndVertical();
         GUILayout.EndHorizontal();
@@ -177,11 +177,11 @@ public static class Menu
         // draw
         GUILayout.BeginVertical(areaStyle);
         GUILayout.BeginHorizontal();
-        GUILayout.Label(textContent, textStyle);
-        GUILayout.Label(valueContent, valueStyle);
+        GUILayout.Label("textContent, textStyle");
+        GUILayout.Label("valueContent, valueStyle");
         GUILayout.EndHorizontal();
         GUILayout.Space(-2);
-        var newValue = (float)Math.Round(GUILayout.HorizontalSlider(value, minimum, maximum, sliderStyle, thumbStyle), 1);
+        var newValue = (float)Math.Round(GUILayout.HorizontalSlider(value, minimum, maximum), 1);
         GUILayout.EndVertical();
 
         // return value
@@ -238,7 +238,7 @@ public static class Menu
         GUILayout.Label(title, titleStyle);
         GUILayout.Space(-4);
 
-        if (_currentDropDown != identifier && GUILayout.Button(currentValue, buttonStyle))
+        if (_currentDropDown != identifier && GUILayout.Button(currentValue))
             _currentDropDown = identifier;
 
         if (_currentDropDown == identifier)
@@ -246,7 +246,7 @@ public static class Menu
             GUILayout.BeginVertical(areaStyle);
 
             foreach (var value in values)
-                if (GUILayout.Button(value, buttonStyle))
+                if (GUILayout.Button(value))
                 {
                     currentValue = value;
                     _currentDropDown = "";

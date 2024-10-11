@@ -12,7 +12,7 @@ public static class SectionStyles
                 background = Texture.NewBorder(.5f, .5f, .5f, .075f, .075f, .075f),
             },
 
-            border = new RectOffset(1, 1, 1, 1),
+            
         };
     }
 

@@ -14,7 +14,7 @@ public static class WindowStyles
 
             fontStyle = FontStyle.BoldAndItalic,
             fontSize = 22,
-            border = new RectOffset(1, 1, 1, 1),
+           
             contentOffset = version is null ? new Vector2(10, 6) : Vector2.zero,
             alignment = TextAnchor.UpperLeft
         };

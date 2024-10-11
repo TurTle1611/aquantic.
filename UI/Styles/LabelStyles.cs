@@ -13,12 +13,7 @@ public static class LabelStyles
                 textColor = Color.gray,
             },
 
-            focused = {
-                background = Texture.NewBorder(0, 0, 0, .12f, .12f, .12f),
-                textColor = Color.white,
-            },
 
-            border = new RectOffset(1, 1, 1, 1),
             alignment = TextAnchor.MiddleCenter,
             fontStyle = FontStyle.Bold,
             fontSize = 12,
@@ -33,7 +28,7 @@ public static class LabelStyles
                 background = Texture.NewBorder(.2f, .2f, .2f, .075f, .075f, .075f),
             },
 
-            border = new RectOffset(1, 1, 1, 1),
+
         };
     }
 

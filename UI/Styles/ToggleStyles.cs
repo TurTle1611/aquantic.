@@ -8,19 +8,13 @@ public static class ToggleStyles
     {
         return new GUIStyle("Box")
         {
-            onNormal =
-            {
-                background = Texture.NewBorder(0, 0, 0, backgroundColor.r, backgroundColor.g, backgroundColor.b),
-            },
-
+            
             normal =
             {
                 background = Texture.NewBorder(0, 0, 0, .15f, .15f, .15f),
             },
 
-            border = new RectOffset(1, 1, 1, 1),
-            fixedHeight = 18,
-            fixedWidth = 18,
+       
         };
     }
 
@@ -45,10 +39,6 @@ public static class ToggleStyles
                 background = Texture.New(.075f, .075f, .075f),
             },
 
-            hover = {
-                background = Texture.New(.075f, .075f, .075f),
-                textColor = Color.white,
-            },
 
             alignment = TextAnchor.MiddleRight,
             fontStyle = FontStyle.Bold,
@@ -65,10 +55,7 @@ public static class ToggleStyles
                 textColor = (isSelected ? Color.white : Color.gray),
             },
 
-            hover = {
-                background = Texture.New(.075f, .075f, .075f),
-                textColor = (isSelected ? Color.white : Color.gray),
-            },
+            
 
             fontStyle = FontStyle.Bold,
             fontSize = 12,

@@ -47,7 +47,7 @@ public class Main : MonoBehaviour
     public void OnGUI()
     {
         // display window
-        Menu.Window(BuildMenu, "Net<color=red>Ware</color>");
+        Menu.Window(BuildMenu, "Net<color=black>AQUANTIC</color>");
     }
     private static void BuildMenu(int _)
     {
@@ -61,7 +61,7 @@ public class Main : MonoBehaviour
 
             // draw
             GUILayout.BeginArea(new Rect(80, 20, versionSize.x, versionSize.y));
-            GUILayout.Label(versionContent, versionStyle);
+            GUILayout.Label("draw");
             GUILayout.EndArea();
         }
 
